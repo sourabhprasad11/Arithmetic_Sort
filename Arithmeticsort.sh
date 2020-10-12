@@ -27,3 +27,12 @@ dict["UC5"]=$uc5
 echo "The Keys-Values of the dict: ";
 echo "${!dict[@]}"
 echo "${dict[@]}";
+
+echo "Array:"
+ar[0]=${dict["UC2"]}
+ar[1]=${dict["UC3"]}
+ar[2]=${dict["UC4"]}
+ar[3]=${dict["UC5"]}
+
+echo ${!ar[@]}
+echo ${ar[@]}
