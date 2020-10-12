@@ -36,3 +36,20 @@ ar[3]=${dict["UC5"]}
 
 echo ${!ar[@]}
 echo ${ar[@]}
+
+for((i=0;i<4;i++))
+do
+	for((j=0;j<4-i-1;j++))
+	do
+		if [ ${ar[j]} -lt ${ar[$((j+1))]} ]; then
+		temp=${ar[j]}
+		ar[$j]=${ar[$((j+1))]}
+		ar[$((j+1))]=$temp
+
+		fi
+	done
+
+done
+
+echo "Descending order: "
+echo ${ar[@]}
