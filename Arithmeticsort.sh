@@ -14,3 +14,6 @@ echo "The Value of UC3: $uc3";
 
 uc4=$(($c+$a/$b))
 echo "The Value of UC4: $uc4";
+
+uc5=$(( $a%$b+$c ));
+echo "The Value of UC5: $uc5";
