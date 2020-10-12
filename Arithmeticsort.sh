@@ -17,3 +17,13 @@ echo "The Value of UC4: $uc4";
 
 uc5=$(( $a%$b+$c ));
 echo "The Value of UC5: $uc5";
+
+declare -A dict
+dict["UC2"]=$uc2
+dict["UC3"]=$uc3
+dict["UC4"]=$uc4
+dict["UC5"]=$uc5
+
+echo "The Keys-Values of the dict: ";
+echo "${!dict[@]}"
+echo "${dict[@]}";
