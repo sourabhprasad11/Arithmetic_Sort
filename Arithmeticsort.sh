@@ -6,5 +6,9 @@ read -p "Enter a value: " a
 read -p "Enter b value: " b
 read -p "Enter c value: " c
 
-uc1=$(( $a+$b*$c ));
-echo "the value of UC1: $uc1"
+uc2=$(( $a+$b*$c ));
+echo "the value of UC2: $uc2"
+
+uc3=$(( $a*$b+$c ));
+echo "The Value of UC3: $uc3";
+
