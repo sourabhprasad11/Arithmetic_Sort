@@ -6,9 +6,18 @@ read -p "Enter a value: " a
 read -p "Enter b value: " b
 read -p "Enter c value: " c
 
-uc2=$(( $a+$b*$c ));
-echo "the value of UC2: $uc2"
+function compute(){
+addmult=$(( $a+$b*$c ));
+echo "the value of Arithmetic Calculation-1: $addmult"
 
-uc3=$(( $a*$b+$c ));
-echo "The Value of UC3: $uc3";
+multiadd=$(( $a*$b+$c ));
+echo "The Value of Arithmetic Calculation-2: $multiadd";
 
+}
+
+function main(){
+
+	compute
+
+}
+main
