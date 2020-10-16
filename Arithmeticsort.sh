@@ -6,10 +6,6 @@ read -p "Enter a value: " a
 read -p "Enter b value: " b
 read -p "Enter c value: " c
 
-
-uc4=$(($c+$a/$b))
-echo "The Value of UC4: $uc4";
-
 uc5=$(( $a%$b+$c ));
 echo "The Value of UC5: $uc5";
 
@@ -50,12 +46,17 @@ echo "Ascending order: "
 echo ${ar[@]}
 
 
+
 function compute(){
+
 addmult=$(( $a+$b*$c ));
-echo "the value of Arithmetic Calculation-1: $addmult"
+echo "the value of Arithmetic Calculation-1: $addmult";
 
 multiadd=$(( $a*$b+$c ));
 echo "The Value of Arithmetic Calculation-2: $multiadd";
+
+add_div=$(($c+$a/$b))
+echo "The Value of Arithmetic Calculation-3: $add_div";
 
 }
 
