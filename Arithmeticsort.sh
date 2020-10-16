@@ -44,7 +44,7 @@ echo ${!ar[@]}
 echo ${ar[@]}
 
 echo "Descending order:";
-printf "%s\n" "${ar[@]}" | sort -n
+printf "%s\n" "${ar[@]}" | sort -nr
 
 }
 main
