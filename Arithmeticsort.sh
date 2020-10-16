@@ -6,7 +6,6 @@ read -p "Enter a value: " a
 read -p "Enter b value: " b
 read -p "Enter c value: " c
 
-
 function compute(){
 
 addmult=$(( $a+$b*$c ));
@@ -35,17 +34,17 @@ dict["C4"]=$diviadd
 echo "The Keys-Values of the dict: ";
 echo "${!dict[@]}"
 echo "${dict[@]}";
-}
-main
 
 echo "Array:"
-ar[0]=${dict["UC2"]}
-ar[1]=${dict["UC3"]}
-ar[2]=${dict["UC4"]}
-ar[3]=${dict["UC5"]}
-
+ar[0]=${dict["C1"]}
+ar[1]=${dict["C2"]}
+ar[2]=${dict["C3"]}
+ar[3]=${dict["C4"]}
 echo ${!ar[@]}
 echo ${ar[@]}
+
+}
+main
 
 for((i=0;i<4;i++))
 do
@@ -63,5 +62,4 @@ done
 
 echo "Ascending order: "
 echo ${ar[@]}
-
 
