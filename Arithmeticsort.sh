@@ -7,15 +7,36 @@ read -p "Enter b value: " b
 read -p "Enter c value: " c
 
 
+function compute(){
+
+addmult=$(( $a+$b*$c ));
+echo "the value of Arithmetic Calculation-1: $addmult"
+
+multiadd=$(( $a*$b+$c ));
+echo "The Value of Arithmetic Calculation-2: $multiadd";
+
+add_div=$(($c+$a/$b))
+echo "The Value of Arithmetic Calculation-3: $add_div";
+
+diviadd=$(( $a%$b+$c ));
+echo "The Value of Arithmetic Calculation-4: $diviadd";
+
+}
+
+function main(){
+
+	compute
 declare -A dict
-dict["UC2"]=$uc2
-dict["UC3"]=$uc3
-dict["UC4"]=$uc4
-dict["UC5"]=$uc5
+dict["C1"]=$addmult
+dict["C2"]=$multiadd
+dict["C3"]=$add_div
+dict["C4"]=$diviadd
 
 echo "The Keys-Values of the dict: ";
 echo "${!dict[@]}"
 echo "${dict[@]}";
+}
+main
 
 echo "Array:"
 ar[0]=${dict["UC2"]}
@@ -44,25 +65,3 @@ echo "Ascending order: "
 echo ${ar[@]}
 
 
-function compute(){
-
-addmult=$(( $a+$b*$c ));
-echo "the value of Arithmetic Calculation-1: $addmult"
-
-multiadd=$(( $a*$b+$c ));
-echo "The Value of Arithmetic Calculation-2: $multiadd";
-
-add_div=$(($c+$a/$b))
-echo "The Value of Arithmetic Calculation-3: $add_div";
-
-diviadd=$(( $a%$b+$c ));
-echo "The Value of Arithmetic Calculation-4: $diviadd";
-
-}
-
-function main(){
-
-	compute
-
-}
-main
